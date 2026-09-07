@@ -1,41 +1,52 @@
 # Hopper Day
 
-**August 14.** The day computers started speaking human.
+**August 14. Talk to your computer. Make something yours.**
 
-An open-source project to celebrate the day Grace Hopper's dream got one step closer to finished — and to hand that celebration to anyone who wants to run with it.
+An open-source project celebrating what people can make when they can talk to their computers. Grace Hopper helped make programming more accessible. Hopper Day is a chance to carry that work forward and give it your own meaning.
 
-- 🌐 Live page: https://techluddite.github.io/hopper-day/
-- 📜 License: MIT — fork it, restyle it, make it yours.
-- 📊 Research: [research.md](research.md) — the full investment-gap trail, sourced.
-- 💡 Thesis: Hopper made machines speak human. Omarchy 4 + natural-language agents is the next sentence. You don't write the code. You talk.
+- [Live page](https://techluddite.github.io/hopper-day/)
+- [MIT license](LICENSE): fork it, contribute, make it yours.
+- [Research notes](research.md): sources, dates, definitions, and calculations.
+- [Research audit](research-audit.md): what changed and which claims remain unresolved.
 
 ## Why August 14
 
-On August 14, 2026, Omarchy 4.0 ("Quattro") shipped — one of the most successful Linux distribution launches ever. Install in under two minutes from a flash drive. No TPM 2.0 required. Then you just chat with the machine to build, fix, and customize software.
+[Omarchy 4.0 ("Quattro") shipped on August 14, 2026](https://github.com/omacom/omarchy/releases/tag/v4.0.0). We're choosing that anniversary as an occasion to celebrate working through ideas with a computer in plain language.
 
-That's the same arc Hopper spent her career on: machine code → compilers → COBOL → *talking to your computer*. The five-year-old laptop is the proof, not the point.
+Hopper and her team helped develop early compilers and FLOW-MATIC, which influenced COBOL. For me, working with an agent on an old laptop feels like another step along that path. The connection is personal; this project doesn't speak for Hopper or the Omarchy team.
 
-## The problem we're pointing at
+## Why old computers matter
 
-~400 million PCs can't officially run Windows 11 (TPM 2.0, Secure Boot, supported CPU). Windows 10 support ended October 14, 2025. PIRG estimates up to **1.6 billion pounds** of additional e-waste. Perfectly good hardware, headed for the dump, over a software policy.
+PIRG estimated that up to 400 million PCs could not upgrade to Windows 11, representing up to 1.6 billion pounds of potential e-waste. That is an estimate of affected hardware, not a tally of discarded machines. [PIRG's report](https://pirg.org/edfund/resources/electronic-waste-graveyard/).
 
-Meanwhile the same industry that spent decades preaching "green" goes quiet the moment its own power bill shows up. Carbon tax talk vanished the second AI data centers needed electricity. Virginia started taxing data-center power in July 2026. Federal proposals followed in August 2026. The hypocrisy is the point.
+The Windows 10 deadline drove replacement demand before regular support ended in October 2025. Microsoft's later consumer extension buys more time, but doesn't undo fleet decisions already made. Business and education ESU programs have separate terms. The [research timeline](research.md#the-extension-came-after-replacement-pressure) records the sources and what we can establish about the refresh wave.
 
-## The gap
+A useful computer deserves another job. Revisit some research, catalog a collection, organize family recipes, or build a tool you've wanted for years. Check hardware compatibility and the setup requirements of whichever Linux distribution and agent you choose.
 
-AI investment this year is on track for ~$1 trillion. We checked the budget for everything that keeps us alive, sane, and curious — food, medicine, the planet, the ocean, the stars, the animals, the arts, the kids — and every one of them is a rounding error next to what we spend teaching machines to think.
+## The investment question
 
-See [research.md](research.md) for the full sourced table.
+Goldman Sachs forecasts about $1 trillion in global AI-related capital investment for 2026. We compare that with selected, traceable US public budgets, including animal welfare, ocean exploration, arts funding, and cancer research. Each figure has a year and a defined scope in the [research notes](research.md#us-comparisons).
 
-## Run with it
+These comparisons show scale. They don't establish a direct transfer of money from public programs into AI. I want to see people working on those problems have more access to useful computing tools, and more say in what gets built.
 
-This repo is intentionally small. One static page, MIT licensed, zero dependencies. Fork it, restyle it, translate it, add a demo, hand it to someone else. Hopper Day shouldn't belong to one person.
+## Make your own Hopper Day
+
+I enjoy the mechanics of making things work. I also love seeing the visuals other people come up with, with or without digital aids.
+
+Fork this project and show us what Hopper Day means to you. Restyle it, translate it, tell your own story, or add something we haven't thought of. Your version can have its own point of view. [Share a link in an issue](https://github.com/TechLuddite/hopper-day/issues) so we can see it.
+
+PRs are welcome too. Help improve this page, correct a source, add a translation, or contribute a personal example of what you'd like to do with your computer.
+
+## Work on the page
+
+This repo is small: one static HTML page with inline CSS and a little JavaScript to cycle through example requests. There are no build tools or package dependencies. Fonts load from Google Fonts, with system fonts as a fallback.
 
 ```bash
 git clone https://github.com/TechLuddite/hopper-day.git
-# edit index.html, push, enable GitHub Pages
+cd hopper-day
+# Open index.html in your browser to preview your edits.
 ```
 
-## Contributing
+The examples change every eight seconds and have a pause button. With reduced motion enabled, they start paused. Without JavaScript, the first example remains readable.
 
-PRs welcome. Keep it fast, keep it forkable, keep the thesis honest.
+Send a PR to contribute here, or publish your own fork with GitHub Pages. Keep it easy to read, easy to adapt, and honest about what the tools can do.

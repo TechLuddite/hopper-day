@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hopper Day — August 14</title>
-  <meta name="description" content="August 14 is Hopper Day. The day computers started speaking human — Grace Hopper's dream, realized." />
+  <meta name="description" content="August 14 is Hopper Day. Celebrate what you can make when you can talk to your computer." />
   <meta property="og:title" content="Hopper Day — August 14" />
-  <meta property="og:description" content="The day a five-year-old laptop stopped being e-waste and started talking back." />
+  <meta property="og:description" content="August 14 is Hopper Day. Talk to your computer, follow an idea, and make something yours." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -62,6 +62,21 @@
     .terminal .out { color: var(--dim); }
     .terminal .ok { color: var(--accent); }
     .terminal .cursor { display: inline-block; width: 8px; height: 1.1em; background: var(--accent); vertical-align: text-bottom; animation: blink 1s steps(2) infinite; }
+    .personal-request { min-height: 8em; overflow-wrap: anywhere; }
+    #toggle-prompts {
+      margin-top: 12px;
+      padding: 6px 10px;
+      border: 1px solid var(--dim);
+      border-radius: 4px;
+      background: var(--panel);
+      color: var(--ink);
+      font: inherit;
+      cursor: pointer;
+    }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    @media (prefers-reduced-motion: reduce) {
+      .terminal .cursor { animation: none; }
+    }
     @keyframes blink { 50% { opacity: 0; } }
     section { margin: 0 0 40px; }
     h2 { font-size: 1.4rem; margin: 0 0 12px; font-weight: 700; }
@@ -103,57 +118,95 @@
 <body>
   <div class="wrap">
     <div class="kicker">August 14 · Hopper Day</div>
-    <h1>The day computers<br /><span class="date">started speaking human.</span></h1>
-    <p class="lede">Grace Hopper spent her career making machines speak our language. Omarchy 4 finished the sentence — you don't write the code. You talk. And the tools to do it just landed in the hands of everyday people, on hardware the industry already wrote off.</p>
+    <h1>Talk to your computer.<br /><span class="date">Make something yours.</span></h1>
+    <p class="lede">Grace Hopper helped make computers easier to program. Working with an AI agent feels like another step along that path: say what you want to make, try it, and work through it together. An older computer can still have a part in that.</p>
 
     <div class="terminal">
-      <div><span class="prompt">$</span> curl -fsSL omarchy.org/install | bash</div>
-      <div class="out">→ downloading omarchy-4.0.0.iso …</div>
-      <div class="out">→ writing to /dev/sdb …</div>
-      <div class="out">→ booting …</div>
-      <div class="ok">✓ installed in 38 seconds</div>
-      <div class="out">→ no TPM 2.0 required</div>
-      <div class="out">→ no landfill required</div>
-      <div><span class="prompt">you@hopper:~$</span> hey, fix my wifi and build me a todo app <span class="cursor"></span></div>
+      <div class="out">a few imagined conversations to get started</div>
+      <div class="personal-request"><span class="prompt">you@hopper:~$</span> <span id="personal-request">hey hopper, let's look at my old research, and when we're done, i have an idea...</span> <span class="cursor" aria-hidden="true"></span></div>
+      <button id="toggle-prompts" type="button" hidden>Pause examples</button>
     </div>
 
     <section>
-      <h2>The arc</h2>
-      <p>Machine code → compilers → COBOL → <em>talking to your computer</em>. Every step Hopper pushed was about lowering the barrier between intent and software. Omarchy 4 plus natural-language agents is the next step in that same line — and this time the barrier isn't just lower, it's gone. The five-year-old laptop is the proof, not the point.</p>
+      <h2>Why Hopper Day?</h2>
+      <p>Hopper and her team worked on early compilers and FLOW-MATIC, helping programmers use words in place of machine instructions. That work influenced COBOL. Her <a href="https://archive.computerhistory.org/resources/text/Oral_History/Hopper_Grace/102702026.05.01.pdf#page=3">oral history</a> is a good place to meet the person behind the name.</p>
+      <p>We're choosing August 14 for Hopper Day because that's when <a href="https://github.com/omacom/omarchy/releases/tag/v4.0.0">Omarchy 4, Quattro, shipped in 2026</a>. For me, that release made working with a computer in plain language feel worth celebrating. I'd like to see what it means to you.</p>
     </section>
 
     <section>
-      <h2>The indictment</h2>
-      <p>Around four hundred million PCs can't officially run Windows 11 — no TPM 2.0, no Secure Boot, unsupported CPU. Windows 10 support ended October 14, 2025. PIRG estimates up to one point six billion pounds of additional e-waste from machines that still work fine. Perfectly good hardware, headed for the dump, over a software policy — a two-dollar flash drive and two minutes away from a machine that talks back.</p>
+      <h2>A useful computer deserves another job</h2>
+      <p>Windows 11's hardware requirements left many working PCs outside the upgrade path. <a href="https://pirg.org/edfund/resources/electronic-waste-graveyard/">PIRG estimated up to 400 million machines were affected</a>, representing up to 1.6 billion pounds of potential e-waste. That's an estimate of the hardware at risk, not a count of computers already dumped.</p>
       <div class="stat-grid">
-        <div class="stat"><div class="num">~400M</div><div class="lbl">PCs locked out of Windows 11</div></div>
-        <div class="stat"><div class="num">1.6B lbs</div><div class="lbl">estimated added e-waste</div></div>
-        <div class="stat"><div class="num">&lt;2 min</div><div class="lbl">Omarchy 4 install from a flash drive</div></div>
-        <div class="stat"><div class="num">$0</div><div class="lbl">TPM chip required</div></div>
+        <div class="stat"><div class="num">Up to 400M</div><div class="lbl">PCs outside the Windows 11 upgrade path, estimated by PIRG</div></div>
+        <div class="stat"><div class="num">1.6B lbs</div><div class="lbl">potential e-waste associated with those PCs, estimated by PIRG</div></div>
       </div>
-      <p>The same industry that spent decades preaching green goes quiet the moment its own power bill shows up. Carbon-tax talk vanished the second AI data centers needed electricity. Virginia started taxing data-center power in July 2026. Federal proposals followed in August. The hypocrisy is the point.</p>
+      <p>The deadline had consequences before it arrived. <a href="https://omdia.tech.informa.com/pr/2025/oct/omdia-global-pc-market-grew-7percent-in-q3-2025-as-windows-10-end-of-service-deadline-nears">Omdia reported a wave of PC upgrades and replacements ahead of October 2025</a>. <a href="https://omdia.tech.informa.com/pr/2026/june/us-pc-shipments-fell-7percent-in-1q26-marking-steepest-decline-since-2023">By early 2026, much of the near-term commercial refresh pipeline was already exhausted</a>.</p>
+      <p>Microsoft later extended consumer security updates to <a href="https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025">October 12, 2027</a>, months after regular support ended. That buys time for remaining PCs. It doesn't undo replacement decisions already made. Businesses and schools have a separate <a href="https://learn.microsoft.com/en-us/windows/whats-new/extended-security-updates">extended-update program</a>.</p>
+      <p>There is still useful work for these machines. Linux can give compatible hardware another life, including as a client for an AI agent. If you're curious about Omarchy, start with its <a href="https://omarchy.org/manual/getting-started/">installation guide</a> and <a href="https://omarchy.org/manual/ai/">agent setup</a>. Compatibility, setup time, and any AI service costs depend on your machine and the tools you choose.</p>
     </section>
 
     <section>
-      <h2>The gap</h2>
-      <p>AI investment this year is on track for about a trillion dollars. We checked the budget for everything that keeps us alive, sane, and curious — and every one of them is a rounding error next to what we spend teaching machines to think.</p>
-      <div class="ratio"><b>~$350M</b> / yr → type 1 diabetes research &nbsp;·&nbsp; ~2,800× less than AI</div>
-      <div class="ratio"><b>~$46M</b> / yr → NOAA's deep-ocean program &nbsp;·&nbsp; ~22,000× less than AI</div>
-      <div class="ratio"><b>~$42M</b> / yr → USDA animal welfare (77 inspectors, 17k facilities) &nbsp;·&nbsp; ~24,000× less than AI</div>
-      <div class="ratio"><b>~$1.7B</b> / yr → all US public arts funding &nbsp;·&nbsp; ~600× less than AI</div>
-      <p>Even our grandest exploration dreams are a rounding error next to the machine budget. NASA's whole agency is about forty times less. The machines aren't the problem. The priority is. And the DRAM angle: seventy percent of global memory now goes to data centers. Every machine we save from the landfill is one less stick the fabs have to fight over.</p>
+      <h2>Look at the scale</h2>
+      <p><a href="https://www.goldmansachs.com/insights/articles/global-investment-is-forecast-to-exceed-1-trillion-in-2026">Goldman Sachs forecasts about $1 trillion in global AI-related capital investment for 2026</a>. Beside that, here are a few US public funding figures for work I care about.</p>
+      <div class="ratio"><b>$37.25M</b> · USDA APHIS Animal Welfare, FY2026<br />Global AI forecast: <b>~26,800×</b> this program's funding. <a href="https://www.govinfo.gov/content/pkg/CREC-2025-11-09/html/CREC-2025-11-09-pt1-PgS8043-2.htm">Source</a></div>
+      <div class="ratio"><b>$47M</b> · NOAA Ocean Exploration and Research, FY2026<br />Global AI forecast: <b>~21,300×</b> this program's funding. <a href="https://www.govinfo.gov/content/pkg/CREC-2026-01-08/pdf/CREC-2026-01-08-bk3.pdf#page=4">Source</a></div>
+      <div class="ratio"><b>~$1.68B</b> · US public arts funding, FY2025 estimate<br />Federal, state, and local arts-agency funding. Global AI forecast: <b>~595×</b> this amount. <a href="https://reader.giarts.org/read/public-funding-for-the-arts-2025">Source</a></div>
+      <div class="ratio"><b>~$7.22B</b> · National Cancer Institute, FY2025 appropriation<br />Global AI forecast: <b>~138×</b> this agency's funding. <a href="https://www.cancer.gov/about-nci/budget/fact-book/data/recent-fiscal-year">Source</a></div>
+      <p>This compares worldwide AI investment with selected US budgets. It shows scale; it doesn't measure everything spent on these fields or prove that one budget took money from another. The <a href="https://github.com/TechLuddite/hopper-day/blob/main/research.md">research notes</a> include the calculations, more comparisons, and their limits.</p>
+      <p>I want more of the computing power being built to reach people working on those problems. Researchers, teachers, artists, and people keeping a small organization going should have a say in what these tools are for.</p>
+      <p>Using an old laptop doesn't erase the cost of a cloud service. <a href="https://omdia.tech.informa.com/pr/2026/june/us-pc-shipments-fell-7percent-in-1q26-marking-steepest-decline-since-2023">AI server demand is also putting pressure on memory supplies for PCs</a>. Keeping hardware in use can avoid a replacement purchase. It's one practical thing we can do while asking harder questions about the buildout.</p>
     </section>
 
     <section>
       <h2>The opportunity</h2>
-      <p>Grace Hopper's dream is our opportunity to make this better. Individuals close to these problems now have more tools and ability than ever — a five-year-old laptop, a flash drive, two minutes, and a machine that talks back. It builds, fixes, customizes, in plain language. That's the dream finished. And it's ours to run with.</p>
-      <a class="cta" href="https://github.com/TechLuddite/hopper-day">★ Star the repo · fork it · make it yours</a>
+      <p>Start with something you care about. Revisit research you set aside, catalog a collection, or build a tool you've wanted for years. That's what I want to celebrate with Hopper Day: more people getting to make things with their computers.</p>
+      <p>I enjoy the mechanics of making things work. I also love seeing the visuals other people come up with, with or without digital aids. Fork this project and show us what Hopper Day means to you. Give it your own look, tell your story, or take it somewhere I haven't thought of.</p>
+      <p>PRs are welcome too: improve this page, add a translation, correct a source, or contribute an example. If you make your own version, <a href="https://github.com/TechLuddite/hopper-day/issues">share a link</a> so we can see it.</p>
+      <a class="cta" href="https://github.com/TechLuddite/hopper-day">Fork it · send a PR · make it yours</a>
     </section>
 
     <footer>
-      Open source under the MIT License. Built by <a href="https://github.com/TechLuddite">TechLuddite</a>. Hand it off — Hopper Day shouldn't belong to one person.<br />
-      Full research trail: <a href="research.md"><code>research.md</code></a> in this repo.
+      Open source under the MIT License. Built by <a href="https://github.com/TechLuddite">TechLuddite</a>. Hopper Day is yours to interpret too.<br />
+      Research notes: <a href="https://github.com/TechLuddite/hopper-day/blob/main/research.md"><code>research.md</code></a> in this repo.
     </footer>
   </div>
+<script>
+    const examples = [
+      "hey hopper, let's look at my old research, and when we're done, i have an idea...",
+      "hey hopper, help me catalog all the old computers i have, and when we're done, i have an idea...",
+      "hey hopper, let's sort through my garden notes, and when we're done, i have an idea...",
+      "hey hopper, help me organize my family recipes, and when we're done, i have an idea...",
+      "hey hopper, let's pick up that project i put aside, and when we're done, i have an idea..."
+    ];
+    const request = document.getElementById('personal-request');
+    const toggle = document.getElementById('toggle-prompts');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let current = 0;
+    let paused = reducedMotion.matches;
+    let timer;
+
+    function updateRotation() {
+      window.clearInterval(timer);
+      toggle.textContent = paused ? 'Play examples' : 'Pause examples';
+      if (!paused && !document.hidden) {
+        timer = window.setInterval(() => {
+          current = (current + 1) % examples.length;
+          request.textContent = examples[current];
+        }, 8000);
+      }
+    }
+
+    toggle.hidden = false;
+    toggle.addEventListener('click', () => {
+      paused = !paused;
+      updateRotation();
+    });
+    reducedMotion.addEventListener('change', () => {
+      paused = reducedMotion.matches;
+      updateRotation();
+    });
+    document.addEventListener('visibilitychange', updateRotation);
+    updateRotation();
+  </script>
 </body>
 </html>
