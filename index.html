@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hopper Day — August 14</title>
+  <meta name="description" content="August 14 is Hopper Day. The day computers started speaking human — Grace Hopper's dream, realized." />
+  <meta property="og:title" content="Hopper Day — August 14" />
+  <meta property="og:description" content="The day a five-year-old laptop stopped being e-waste and started talking back." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0e14;
+      --panel: #111827;
+      --ink: #e6edf3;
+      --dim: #8b949e;
+      --accent: #7ee787;
+      --accent-2: #58a6ff;
+      --warn: #f0883e;
+      --line: #21262d;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 96px; }
+    .kicker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      line-height: 1.05;
+      margin: 12px 0 8px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    h1 .date { color: var(--accent-2); }
+    .lede { font-size: 1.25rem; color: var(--dim); margin: 0 0 40px; max-width: 60ch; }
+    .terminal {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px 22px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      margin: 0 0 48px;
+      overflow-x: auto;
+    }
+    .terminal .prompt { color: var(--accent); }
+    .terminal .out { color: var(--dim); }
+    .terminal .ok { color: var(--accent); }
+    .terminal .cursor { display: inline-block; width: 8px; height: 1.1em; background: var(--accent); vertical-align: text-bottom; animation: blink 1s steps(2) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    section { margin: 0 0 40px; }
+    h2 { font-size: 1.4rem; margin: 0 0 12px; font-weight: 700; }
+    p { margin: 0 0 14px; color: #c9d1d9; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 20px 0; }
+    .stat {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .stat .num { font-family: 'JetBrains Mono', monospace; font-size: 1.6rem; font-weight: 700; color: var(--warn); }
+    .stat .lbl { font-size: 0.85rem; color: var(--dim); margin-top: 4px; }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #0a0e14;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-top: 8px;
+    }
+    .cta:hover { text-decoration: none; filter: brightness(1.05); }
+    footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--dim); }
+    footer code { font-family: 'JetBrains Mono', monospace; color: var(--ink); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kicker">August 14 · Hopper Day</div>
+    <h1>The day computers<br /><span class="date">started speaking human.</span></h1>
+    <p class="lede">Grace Hopper spent her career making machines speak our language. Omarchy 4 finished the sentence — you don't write the code. You talk.</p>
+
+    <div class="terminal">
+      <div><span class="prompt">$</span> curl -fsSL omarchy.org/install | bash</div>
+      <div class="out">→ downloading omarchy-4.0.0.iso …</div>
+      <div class="out">→ writing to /dev/sdb …</div>
+      <div class="out">→ booting …</div>
+      <div class="ok">✓ installed in 38 seconds</div>
+      <div class="out">→ no TPM 2.0 required</div>
+      <div class="out">→ no landfill required</div>
+      <div><span class="prompt">you@hopper:~$</span> hey, fix my wifi and build me a todo app <span class="cursor"></span></div>
+    </div>
+
+    <section>
+      <h2>The arc</h2>
+      <p>Machine code → compilers → COBOL → <em>talking to your computer</em>. Every step Hopper pushed was about lowering the barrier between intent and software. Omarchy 4 plus natural-language agents is the next step in that same line. The five-year-old laptop is the proof, not the point.</p>
+    </section>
+
+    <section>
+      <h2>The indictment</h2>
+      <p>Around four hundred million PCs can't officially run Windows 11 — no TPM 2.0, no Secure Boot, unsupported CPU. Windows 10 support ended October 14, 2025. PIRG estimates up to one point six billion pounds of additional e-waste from machines that still work fine.</p>
+      <div class="stat-grid">
+        <div class="stat"><div class="num">~400M</div><div class="lbl">PCs locked out of Windows 11</div></div>
+        <div class="stat"><div class="num">1.6B lbs</div><div class="lbl">estimated added e-waste</div></div>
+        <div class="stat"><div class="num">&lt;2 min</div><div class="lbl">Omarchy 4 install from a flash drive</div></div>
+        <div class="stat"><div class="num">$0</div><div class="lbl">TPM chip required</div></div>
+      </div>
+      <p>The same industry that spent decades preaching green goes quiet the moment its own power bill shows up. Carbon-tax talk vanished the second AI data centers needed electricity. Virginia started taxing data-center power in July 2026. Federal proposals followed in August. The hypocrisy is the point.</p>
+    </section>
+
+    <section>
+      <h2>The opportunity</h2>
+      <p>Grace Hopper's dream is our opportunity to make this better. Perfectly good hardware, a two-dollar stick, two minutes, and a machine that talks back — instead of a dump. This is ours to run with.</p>
+      <a class="cta" href="https://github.com/TechLuddite/hopper-day">★ Star the repo · fork it · make it yours</a>
+    </section>
+
+    <footer>
+      Open source under the MIT License. Built by <a href="https://github.com/TechLuddite">TechLuddite</a>. Hand it off — Hopper Day shouldn't belong to one person.<br />
+      Research trail: see the <code>Hopper-Day.md</code> and <code>Hopper-Day-Expansion.md</code> notes.
+    </footer>
+  </div>
+</body>
+</html>
