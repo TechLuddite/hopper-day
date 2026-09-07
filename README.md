@@ -6,6 +6,7 @@ An open-source project to celebrate the day Grace Hopper's dream got one step cl
 
 - 🌐 Live page: https://techluddite.github.io/hopper-day/
 - 📜 License: MIT — fork it, restyle it, make it yours.
+- 📊 Research: [research.md](research.md) — the full investment-gap trail, sourced.
 - 💡 Thesis: Hopper made machines speak human. Omarchy 4 + natural-language agents is the next sentence. You don't write the code. You talk.
 
 ## Why August 14
@@ -20,6 +21,12 @@ That's the same arc Hopper spent her career on: machine code → compilers → C
 
 Meanwhile the same industry that spent decades preaching "green" goes quiet the moment its own power bill shows up. Carbon tax talk vanished the second AI data centers needed electricity. Virginia started taxing data-center power in July 2026. Federal proposals followed in August 2026. The hypocrisy is the point.
 
+## The gap
+
+AI investment this year is on track for ~$1 trillion. We checked the budget for everything that keeps us alive, sane, and curious — food, medicine, the planet, the ocean, the stars, the animals, the arts, the kids — and every one of them is a rounding error next to what we spend teaching machines to think.
+
+See [research.md](research.md) for the full sourced table.
+
 ## Run with it
 
 This repo is intentionally small. One static page, MIT licensed, zero dependencies. Fork it, restyle it, translate it, add a demo, hand it to someone else. Hopper Day shouldn't belong to one person.
@@ -31,4 +38,4 @@ git clone https://github.com/TechLuddite/hopper-day.git
 
 ## Contributing
 
-PRs welcome. Keep it fast, keep it forkable, keep the thesis honest. See the notes in the sibling `notes` repo for the full research trail.
+PRs welcome. Keep it fast, keep it forkable, keep the thesis honest.

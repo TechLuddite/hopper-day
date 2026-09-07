@@ -87,6 +87,15 @@
       margin-top: 8px;
     }
     .cta:hover { text-decoration: none; filter: brightness(1.05); }
+    .ratio {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95rem;
+      color: var(--dim);
+      border-left: 2px solid var(--line);
+      padding-left: 14px;
+      margin: 18px 0;
+    }
+    .ratio b { color: var(--warn); }
     footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 0.85rem; color: var(--dim); }
     footer code { font-family: 'JetBrains Mono', monospace; color: var(--ink); }
   </style>
@@ -95,7 +104,7 @@
   <div class="wrap">
     <div class="kicker">August 14 · Hopper Day</div>
     <h1>The day computers<br /><span class="date">started speaking human.</span></h1>
-    <p class="lede">Grace Hopper spent her career making machines speak our language. Omarchy 4 finished the sentence — you don't write the code. You talk.</p>
+    <p class="lede">Grace Hopper spent her career making machines speak our language. Omarchy 4 finished the sentence — you don't write the code. You talk. And the tools to do it just landed in the hands of everyday people, on hardware the industry already wrote off.</p>
 
     <div class="terminal">
       <div><span class="prompt">$</span> curl -fsSL omarchy.org/install | bash</div>
@@ -110,12 +119,12 @@
 
     <section>
       <h2>The arc</h2>
-      <p>Machine code → compilers → COBOL → <em>talking to your computer</em>. Every step Hopper pushed was about lowering the barrier between intent and software. Omarchy 4 plus natural-language agents is the next step in that same line. The five-year-old laptop is the proof, not the point.</p>
+      <p>Machine code → compilers → COBOL → <em>talking to your computer</em>. Every step Hopper pushed was about lowering the barrier between intent and software. Omarchy 4 plus natural-language agents is the next step in that same line — and this time the barrier isn't just lower, it's gone. The five-year-old laptop is the proof, not the point.</p>
     </section>
 
     <section>
       <h2>The indictment</h2>
-      <p>Around four hundred million PCs can't officially run Windows 11 — no TPM 2.0, no Secure Boot, unsupported CPU. Windows 10 support ended October 14, 2025. PIRG estimates up to one point six billion pounds of additional e-waste from machines that still work fine.</p>
+      <p>Around four hundred million PCs can't officially run Windows 11 — no TPM 2.0, no Secure Boot, unsupported CPU. Windows 10 support ended October 14, 2025. PIRG estimates up to one point six billion pounds of additional e-waste from machines that still work fine. Perfectly good hardware, headed for the dump, over a software policy — a two-dollar flash drive and two minutes away from a machine that talks back.</p>
       <div class="stat-grid">
         <div class="stat"><div class="num">~400M</div><div class="lbl">PCs locked out of Windows 11</div></div>
         <div class="stat"><div class="num">1.6B lbs</div><div class="lbl">estimated added e-waste</div></div>
@@ -126,14 +135,24 @@
     </section>
 
     <section>
+      <h2>The gap</h2>
+      <p>AI investment this year is on track for about a trillion dollars. We checked the budget for everything that keeps us alive, sane, and curious — and every one of them is a rounding error next to what we spend teaching machines to think.</p>
+      <div class="ratio"><b>~$350M</b> / yr → type 1 diabetes research &nbsp;·&nbsp; ~2,800× less than AI</div>
+      <div class="ratio"><b>~$46M</b> / yr → NOAA's deep-ocean program &nbsp;·&nbsp; ~22,000× less than AI</div>
+      <div class="ratio"><b>~$42M</b> / yr → USDA animal welfare (77 inspectors, 17k facilities) &nbsp;·&nbsp; ~24,000× less than AI</div>
+      <div class="ratio"><b>~$1.7B</b> / yr → all US public arts funding &nbsp;·&nbsp; ~600× less than AI</div>
+      <p>Even our grandest exploration dreams are a rounding error next to the machine budget. NASA's whole agency is about forty times less. The machines aren't the problem. The priority is. And the DRAM angle: seventy percent of global memory now goes to data centers. Every machine we save from the landfill is one less stick the fabs have to fight over.</p>
+    </section>
+
+    <section>
       <h2>The opportunity</h2>
-      <p>Grace Hopper's dream is our opportunity to make this better. Perfectly good hardware, a two-dollar stick, two minutes, and a machine that talks back — instead of a dump. This is ours to run with.</p>
+      <p>Grace Hopper's dream is our opportunity to make this better. Individuals close to these problems now have more tools and ability than ever — a five-year-old laptop, a flash drive, two minutes, and a machine that talks back. It builds, fixes, customizes, in plain language. That's the dream finished. And it's ours to run with.</p>
       <a class="cta" href="https://github.com/TechLuddite/hopper-day">★ Star the repo · fork it · make it yours</a>
     </section>
 
     <footer>
       Open source under the MIT License. Built by <a href="https://github.com/TechLuddite">TechLuddite</a>. Hand it off — Hopper Day shouldn't belong to one person.<br />
-      Research trail: see the <code>Hopper-Day.md</code> and <code>Hopper-Day-Expansion.md</code> notes.
+      Full research trail: <a href="research.md"><code>research.md</code></a> in this repo.
     </footer>
   </div>
 </body>
